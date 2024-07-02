@@ -121,3 +121,18 @@ alias upd='sudo apt update'
 alias upg='sudo apt upgrade'
 alias ins='sudo apt install'
 alias rem='sudo apt remove'
+
+# create executable script
+ces() {
+  touch $1 && chmod +x $1;
+}
+
+# take command
+take() {
+  mkdir $1 && cd $1;
+}
+
+# put bun on path
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+. "$HOME/.cargo/env"
