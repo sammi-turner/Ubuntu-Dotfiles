@@ -134,7 +134,7 @@ take() {
 
 # GDC COMPILER
 dlang() {
-  gdc *.d -of=$1;
+  gdc *.d -o $1;
 }
 
 # BUN EXPORTS
