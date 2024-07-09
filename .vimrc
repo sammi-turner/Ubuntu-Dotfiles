@@ -15,4 +15,5 @@ set number
 set background=dark
 set guifont=Ubuntu\ Mono\ 20
 
+colorscheme desert
 syntax on
