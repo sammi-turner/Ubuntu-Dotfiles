@@ -116,23 +116,28 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# apt aliases
+# APT ALIASES
 alias upd='sudo apt update'
 alias upg='sudo apt upgrade'
 alias ins='sudo apt install'
 alias rem='sudo apt remove'
 
-# create executable script
+# CREATE EXECUTABLE SCRIPT
 ces() {
   touch $1 && chmod +x $1;
 }
 
-# take command
+# TAKE COMMAND
 take() {
   mkdir $1 && cd $1;
 }
 
-# put bun on path
+# GDC COMPILER
+dlang() {
+  gdc *.d -of=$1;
+}
+
+# BUN EXPORTS
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 . "$HOME/.cargo/env"
