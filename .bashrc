@@ -134,9 +134,9 @@ take() {
 
 # DLANG NEW PROJECT
 dnew() {
-	mkdir $1;
-	cd $1;
-	dub init -n;
+  mkdir $1;
+  cd $1;
+  dub init -n;
 }
 
 # DLANG RELEASE BUILD
