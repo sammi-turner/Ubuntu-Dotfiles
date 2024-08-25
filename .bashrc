@@ -132,10 +132,15 @@ take() {
   mkdir $1 && cd $1;
 }
 
-# GDC COMPILER
-dlang() {
-  gdc *.d -o $1;
+# DLANG NEW PROJECT
+dnew() {
+	mkdir $1;
+	cd $1;
+	dub init -n;
 }
+
+# DLANG RELEASE BUILD
+alias drel='dub build --build=release'
 
 # BUN EXPORTS
 export BUN_INSTALL="$HOME/.bun"
